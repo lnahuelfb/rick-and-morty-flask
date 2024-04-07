@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="{{url_for('static', filename='styles/detail.css')}}" type="text/css">
+
+{% extends 'layout.html' %}
+
+{% block body %}
+
+{% if name %}
+<h1>{{name}}</h1>
+{% endif %}
+
+{% endblock %}

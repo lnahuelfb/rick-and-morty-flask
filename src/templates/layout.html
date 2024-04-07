@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+
+<header class="header">
+  <picture>
+    <a href="/">
+      <img src="{{url_for('static', filename='assets/logo.png')}}" alt="logo" class="logo">
+    </a>
+  </picture>
+  <nav class="navbar">
+    <a href="/" class="link">Inicio</a>
+    <a href="/characters" class="link">Personajes</a>
+    <a href="/locations" class="link">Locaciones</a>
+    <a href="/episodes" class="link">Episodios</a>
+    <a href="/contact" class="link">Contacto</a>
+  </nav>
+</header>
+
+<section>
+  {% block body %}
+  {% endblock %}
+</section>
+
+<footer class="footer">
+  <img src="{{url_for('static', filename='assets/logo.png')}}" alt="footer" class="footer-image">
+  <p>Rick and morty API</p>
+</footer>
