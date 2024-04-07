@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static', filename='styles/buscador.css')}}" type="text/css">
+  <title>Busqueda</title>
+</head>
+
+<body>
+
+  {% extends 'layout.html' %}
+
+  {% block body %}
+
+  {% if name %}
+  <h1>{{name}}</h1>
+  {% endif %}
+
+  {% endblock %}
+</body>
+
+</html>

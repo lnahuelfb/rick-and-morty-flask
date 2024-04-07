@@ -1,0 +1,11 @@
+@import url("./variables.css");
+
+img {
+  width: 250px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  color: var(--primary-color);
+}

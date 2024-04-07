@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static', filename='styles/list.css')}}" type="text/css">
+  <link rel="shortcut icon" href="{{url_for('static', filename='assets/logo.png')}}" type="image/x-icon">
+  <title>{{path}}</title>
+</head>
+
+<body>
+  {% extends 'layout.html' %}
+
+  {% block body %}
+
+  {% if list %}
+  <ul>
+    {% for item in list %}
+    {%if path=='Characters'%}
+
+    <li>
+      <a href="{{item.id}}">
+        <img src="{{item.image}}" alt="{{item.name}}">
+      </a>
+      <h3>{{item.name}}</h3>
+    </li>
+
+    {%else%}
+
+    <li>
+      <a href="{{item.id}}">
+        {%if path == 'Episodes'%}
+        <h3>Episode n° {{item.id}}: {{item.name}}</h3>
+        {%elif path=='Locations'%}
+        <h3>{{item.name}}</h3>
+        {%endif%}
+      </a>
+    </li>
+    
+    {%endif%}
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% endblock %}
+
+</body>
+
+</html>
