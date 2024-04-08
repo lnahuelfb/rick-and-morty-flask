@@ -14,4 +14,4 @@ app.register_blueprint(locationsRoutes.main, url_prefix='/locations')
 app.register_blueprint(contactRoutes.main, url_prefix='/contact')
 
 if __name__ == '__main__':
-  app.run(debug=True, port=3000)
+  app.run()

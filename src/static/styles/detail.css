@@ -1,1 +1,10 @@
 @import url("./variables.css");
+
+article {
+  display: flex;
+  gap: 15px;
+}
+
+span { 
+  display: block;
+}

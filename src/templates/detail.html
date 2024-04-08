@@ -4,8 +4,23 @@
 
 {% block body %}
 
-{% if name %}
-<h1>{{name}}</h1>
+{% if data %}
+<article>
+  <picture>
+    <img src="{{data.image}}" alt="">
+  </picture>
+  <div class="data-container">
+    <h1>{{data.name}}</h1>
+    <p>Status: {{data.status}}</p>
+    <p>Origen: <a href="{{data.origin.url}}">{{data.origin.name}}</p></a>
+    <p>Location: <a href="{{data.location.url}}">{{data.location.name}}</a></p>
+    <p>Episodios:
+      {%for e in episode%}
+      {{e}}
+      {%endfor%}
+    </p>
+  </div>
+</article>
 {% endif %}
 
 {% endblock %}

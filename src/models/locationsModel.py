@@ -1,5 +1,3 @@
-from utils.fetchData import fetchData
-
 class Location():
   def __init__(self, obj):
     self.id = obj['id']
